@@ -18,7 +18,9 @@ export default function Navbar() {
                         <MenuIcon />
                     </div>
                     <div className="flex-1">
-                        <h1 className="text-[24px] font-semibold text-center lg:text-left">FASION<span className="text-[18px]">EXTRA</span></h1>
+                        <Link to='/'>
+                            <h1 className="text-[24px] font-semibold text-center lg:text-left">FASION<span className="text-[18px]">EXTRA</span></h1>
+                        </Link>
                     </div>
                     <div className="hidden lg:flex items-center flex-1">
                         <div className="flex items-center gap-[40px] font-medium whitespace-nowrap">

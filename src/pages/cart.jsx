@@ -69,7 +69,7 @@ export default function Cart() {
                                 Explore our collection of stylish skirts and blouses! From maxi skirts to chic mini skirts and classic to trendy blouse.
                             </div>
                             <div className="flex items-center justify-between">
-                                <p>Size: XL</p>
+                                <p className="text-[14px]">Size: XL</p>
                                 <div className="h-[35px] shrink-0 bg-[#F1F1EF] rounded-[5px] px-[10px] grid place-items-center w-fit">
                                     <div className="h-[22px] flex items-center gap-[6px]">
                                         <button className="bg-[#FFFFFF] disabled:bg-[#FFFFFF66] w-[22px] h-[22px] rounded-full grid place-items-center">
