@@ -9,6 +9,9 @@ export default {
       colors: {
         primary: '#012148'
       },
+      boxShadow: {
+        'custom': '0px 4px 30px rgba(0, 0, 0, 0.1)',
+      },
     },
   },
   plugins: [],

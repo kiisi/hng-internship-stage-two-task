@@ -1,3 +1,4 @@
+import Footer from "../components/footer/footer";
 import Category from "../components/home/category";
 import FeaturedCollection from "../components/home/featured-collection";
 import LatestArrival from "../components/home/latest-arrival";
@@ -16,7 +17,8 @@ export default function Home() {
             <FeaturedCollection />
             <div className="h-[50px] lg:h-[72px]"></div>
             <LatestArrival />
-            <div className="h-[50px] lg:h-[72px]"></div>
+            <div className="h-[100px] lg:h-[150px]"></div>
+            <Footer />
         </>
     )
 }

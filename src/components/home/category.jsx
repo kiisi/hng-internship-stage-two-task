@@ -53,8 +53,25 @@ export default function Category() {
         // Register Swiper web component
         register();
 
+        const params = {
+            injectStyles: [`
+            
+            `],
+            spaceBetween: 10,
+            breakpoints: {
+                1024: {
+                    spaceBetween: 30,
+                },
+                625: {
+                    spaceBetween: 20,
+                },
+            },
+        }
+
         // Assign it to swiper element
-        Object.assign(swiperRef.current);
+        Object.assign(swiperRef.current, params);
+
+
 
         // initialize swiper
         swiperRef.current.initialize();
@@ -70,14 +87,13 @@ export default function Category() {
                     ref={swiperRef}
                     init="false"
                     slides-per-view="auto"
-                    space-between="30"
                 >
                     {
                         categoryData.map((data, index) => (
                             <swiper-slide key={index} class="relative w-[120px] sm:w-[150px] lg:w-[193px]">
-                                <figure className="w-[120px] sm:w-[150px] lg:w-[193px]">
+                                <figure className="w-[100px] sm:w-[150px] lg:w-[193px]">
                                     <img src={data.image} alt={data.title} />
-                                    <figcaption className="text-center pt-4 font-medium text-[18px]">{data.title}</figcaption>
+                                    <figcaption className="text-center pt-4 font-medium text-[15px] lg:text-[18px]">{data.title}</figcaption>
                                 </figure>
                             </swiper-slide>
                         ))
