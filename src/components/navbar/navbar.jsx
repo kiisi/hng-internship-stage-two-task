@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { cn } from "../../utils/cn";
 import { useState } from "react";
-import { HeartIcon, ShoppingCartAltIcon } from "../svg";
+import { HeartIcon, MenuIcon, ShoppingCartAltIcon } from "../svg";
 
 export default function Navbar() {
 
@@ -14,10 +14,13 @@ export default function Navbar() {
         <>
             <nav className="border-b-[1px] border-b-[#0B12151F]">
                 <div className="flex items-center gap-2 justify-between w-full max-w-[1440px] mx-auto py-[18px] lg:py-[24px] lg:px-[52px] sm:px-[32px] px-[16px] overflow-hidden">
+                    <div className="flex-1 lg:hidden">
+                        <MenuIcon />
+                    </div>
                     <div className="flex-1">
                         <h1 className="text-[24px] font-semibold">FASION<span className="text-[18px]">EXTRA</span></h1>
                     </div>
-                    <div className="hidden lg:flex items-center gap-[40px] font-medium flex-1">
+                    <div className="hidden lg:flex items-center gap-[40px] font-medium flex-1 whitespace-nowrap">
                         <Link to='/'>Home</Link>
                         <Link to='/'>Category</Link>
                         <Link to='/'>Featured Collections</Link>

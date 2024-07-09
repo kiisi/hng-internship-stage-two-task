@@ -1,6 +1,6 @@
 import Box from "../box"
 import FavoriteButton from "../button/favorite-button"
-import { StarIcon } from "../svg"
+import { CartIcon, StarIcon } from "../svg"
 
 export default function LatestArrival() {
 
@@ -70,6 +70,16 @@ export default function LatestArrival() {
                                     alt={data.name}
                                     className='w-full object-cover rounded-[5px] h-[186px] sm:h-[249px] lg:h-[426px]'
                                 />
+                                <div className="hidden group-hover:block bottom-[16px] sm:bottom-[24px] lg:bottom-[32px] px-[13px] sm:px-[20px] lg:px-[25px] w-full absolute">
+                                    <button
+                                        className="bottom-[32px] w-full bg-[#b9ceeb] h-[26px] sm:h-[35px] lg:h-[50px] grid place-items-center rounded-[3px]"
+                                    >
+                                        <div className="flex items-center gap-[8px] sm:gap-[10px] lg:gap-[12px] text-[#0B1215] text-[8px] sm:text-[12px] lg:text-[14px] font-medium">
+                                            <CartIcon className="w-[10px] h-[10px] sm:w-[14px] sm:h-[14px] lg:w-[18px] lg:h-[18px]" />
+                                            <span className="text-primary">Add to Cart</span>
+                                        </div>
+                                    </button>
+                                </div>
                             </figure>
                             <FavoriteButton />
                             <div className="pt-[14px] sm:pt-[16px] lg:pt-[20px] text-[13px] lg:text-[16px]">
