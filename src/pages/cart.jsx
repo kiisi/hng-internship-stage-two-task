@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import Box from "../components/box";
 import Navbar from "../components/navbar/navbar";
 import Seo from "../components/seo";
 import { AddCircularIcon, CloseIcon, MinusCircularIcon } from "../components/svg";
 
 export default function Cart() {
+
+    const navigate = useNavigate()
 
     return (
         <>
@@ -110,7 +113,7 @@ export default function Cart() {
                         </div>
                     </div>
                     <div className="grid place-items-center">
-                        <button className="w-full bg-primary h-[46px] lg:h-[56px] grid place-items-center text-[15px] lg:text-[18px] max-w-[619px] text-white rounded-[10px]">
+                        <button onClick={() => navigate('/checkout')} className="w-full bg-primary h-[46px] lg:h-[56px] grid place-items-center text-[15px] lg:text-[18px] max-w-[619px] text-white rounded-[10px]">
                             Proceed to Checkout
                         </button>
                     </div>

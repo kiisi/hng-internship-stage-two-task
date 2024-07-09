@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider, ScrollRestoration } from "
 import PageNotFound from "./pages/page-not-found"
 import Home from "./pages/home";
 import Cart from "./pages/cart";
+import Checkout from "./pages/checkout";
 
 const Root = () => {
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <Cart />
+      },
+      {
+        path: '/checkout',
+        element: <Checkout />
       },
     ]
   },

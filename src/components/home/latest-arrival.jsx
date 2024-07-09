@@ -60,7 +60,7 @@ export default function LatestArrival() {
             <header className="mb-[32px]">
                 <h1 className="text-[18px] lg:text-[24px] text-[#0B1215] font-semibold">Latest Arrival</h1>
             </header>
-            <div className='grid gap-x-[9px] sm:gap-x-[11px] lg:gap-x-[21px] gap-y-[24px] sm:gap-y-[64px] lg:gap-y-[84px] grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'>
+            <div className='grid gap-x-[9px] sm:gap-x-[11px] lg:gap-x-[21px] gap-y-[48px] sm:gap-y-[64px] lg:gap-y-[84px] grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'>
                 {
                     images.map((data, index) => (
                         <div key={index} className="relative">
