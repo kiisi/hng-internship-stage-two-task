@@ -7,6 +7,7 @@ import LineLoader from "../loaders/line-loader";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import CartButton from "../button/cart-button";
+import { Link } from "react-router-dom";
 
 export default function FeaturedCollection() {
 
@@ -17,7 +18,6 @@ export default function FeaturedCollection() {
             initialPageParam: 1,
             getNextPageParam: (lastPage) => lastPage.data.page + 1
         });
-        console.log(data)
 
     const { ref, inView } = useInView();
 
@@ -70,7 +70,7 @@ export default function FeaturedCollection() {
                                         </div>
                                     </div>
                                     <div className="text-[#0B1215] mt-[10px] flex items-center justify-between">
-                                        <span className="underline text-primary">View Details</span>
+                                        <Link to={`/product/${data.id}`} className="underline text-primary">View Details</Link>
                                         <p className="font-bold">₦ {formatNumberWithCommas(data.current_price[0]["NGN"][0])}</p>
                                     </div>
                                 </div>

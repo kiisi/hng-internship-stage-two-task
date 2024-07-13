@@ -67,7 +67,12 @@ const reducer = (state, action) => {
                 cart: filteredCart
             }
         }
-        
+        case "CLEAR_CART": {
+            return {
+                ...state,
+                cart: []
+            }
+        }
         default: {
             throw Error("Unknown Action")
         }

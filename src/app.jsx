@@ -3,6 +3,7 @@ import PageNotFound from "./pages/page-not-found"
 import Home from "./pages/home";
 import Cart from "./pages/cart";
 import Checkout from "./pages/checkout";
+import Product from "./components/home/product";
 
 const Root = () => {
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: '/checkout',
         element: <Checkout />
       },
+      {
+        path: '/product/:id',
+        element: <Product />,
+      }
     ]
   },
 ]);

@@ -29,6 +29,10 @@ export default function Cart() {
         dispatch({ type: "DELETE_CART_PRODUCT", payload: id })
     }
 
+    const clearCartHandler = () => {
+        dispatch({ type: "CLEAR_CART" })
+    }
+
     const subtotal = state.cart.reduce((accumulator, currentValue) => accumulator + currentValue.total, 0)
 
     return (
@@ -40,6 +44,13 @@ export default function Cart() {
                     <h1 className="text-center text-[24px] text-[#0B1215] font-semibold">Cart</h1>
                 </header>
                 <div className="rounded-[5px] flex flex-col gap-[24px] lg:gap-[32px]">
+                    {
+                        cart.length === 0 && (
+                            <p className="text-center">
+                                Your cart is currently empty.
+                            </p>
+                        )
+                    }
                     {
                         cart.map((data) => (
                             <div key={data.id} className="p-[14px] rounded-[10px] flex gap-[12px] lg:gap-[25px] shadow-custom">
@@ -79,6 +90,9 @@ export default function Cart() {
                             </div>
                         ))
                     }
+                </div>
+                <div className="pt-10">
+                    <p className="underline cursor-pointer" onClick={clearCartHandler}>Clear cart</p>
                 </div>
             </Box>
             <div className="shadow-custom">
