@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 import { cn } from "../../utils/cn";
 import { useState } from "react";
 import { HeartIcon, MenuIcon, ShoppingCartAltIcon } from "../svg";
+import { useCartContext } from "../../contexts/cart";
 
 export default function Navbar() {
+
+    const { state } = useCartContext()
+
+    const cart = state.cart
 
     const [mobileNavBarVisibility, setMobileNavBarVisibility] = useState(false);
 
@@ -40,7 +45,7 @@ export default function Navbar() {
                                     <span className="relative flex h-5 w-5">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-0 group-hover:opacity-75"></span>
                                         <span className="relative grid place-items-center rounded-full h-5 w-5 bg-primary text-white text-[11px] font-semibold">
-                                            0
+                                            {cart.length}
                                         </span>
                                     </span>
                                 </div>
