@@ -10,7 +10,6 @@ import CartButton from "../button/cart-button";
 
 export default function FeaturedCollection() {
 
-
     const { data, isError, fetchNextPage, isFetchingNextPage, isLoading } =
         useInfiniteQuery({
             queryKey: ['products'],
@@ -18,6 +17,7 @@ export default function FeaturedCollection() {
             initialPageParam: 1,
             getNextPageParam: (lastPage) => lastPage.data.page + 1
         });
+        console.log(data)
 
     const { ref, inView } = useInView();
 
@@ -27,6 +27,10 @@ export default function FeaturedCollection() {
             fetchNextPage();
         }
     }, [fetchNextPage, inView]);
+
+    function formatNumberWithCommas(number) {
+        return number.toLocaleString('en-US');
+    }
 
     return (
         <Box>
@@ -67,7 +71,7 @@ export default function FeaturedCollection() {
                                     </div>
                                     <div className="text-[#0B1215] mt-[10px] flex items-center justify-between">
                                         <span className="underline text-primary">View Details</span>
-                                        <p className="font-bold">${data.price}</p>
+                                        <p className="font-bold">₦ {formatNumberWithCommas(data.current_price[0]["NGN"][0])}</p>
                                     </div>
                                 </div>
                             </div>

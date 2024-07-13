@@ -11,7 +11,7 @@ const reducer = (state, action) => {
         case "ADD_TO_CART": {
             const product = action.payload
             product.quantity = 1
-            product.total = product.quantity * product.price
+            product.total = product.quantity * product.current_price[0]["NGN"][0]
             return {
                 ...state,
                 cart: [product, ...state.cart]
@@ -35,7 +35,7 @@ const reducer = (state, action) => {
                 cart[productIndex].quantity += 1
             }
 
-            cart[productIndex].total = cart[productIndex].quantity * cart[productIndex].price
+            cart[productIndex].total = cart[productIndex].quantity * cart[productIndex].current_price[0]["NGN"][0]
 
             return {
                 ...state,
@@ -51,7 +51,7 @@ const reducer = (state, action) => {
                 cart[productIndex].quantity -= 1
             }
 
-            cart[productIndex].total = cart[productIndex].quantity * cart[productIndex].price
+            cart[productIndex].total = cart[productIndex].quantity * cart[productIndex].current_price[0]["NGN"][0]
 
             return {
                 ...state,
