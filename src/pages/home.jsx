@@ -1,7 +1,6 @@
 import Footer from "../components/footer/footer";
 import Category from "../components/home/category";
 import FeaturedCollection from "../components/home/featured-collection";
-import LatestArrival from "../components/home/latest-arrival";
 import Navbar from "../components/navbar/navbar";
 import Seo from "../components/seo";
 
@@ -15,8 +14,6 @@ export default function Home() {
             <Category />
             <div className="h-[50px] lg:h-[72px]"></div>
             <FeaturedCollection />
-            <div className="h-[50px] lg:h-[72px]"></div>
-            <LatestArrival />
             <div className="h-[100px] lg:h-[150px]"></div>
             <Footer />
         </>
