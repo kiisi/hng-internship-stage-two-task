@@ -18,6 +18,7 @@ export default function Product() {
     })
 
     const productData = data?.data
+    console.log(productData)
 
     return (
         <>
@@ -42,7 +43,7 @@ export default function Product() {
                             <img
                                 src={`https://api.timbu.cloud/images/${productData.photos[0]?.url}`}
                                 alt={productData.name}
-                                className='w-full h-full object-cover h-[286px] sm:h-[420px] lg:h-[520px]'
+                                className='w-full object-cover h-[286px] sm:h-[420px] lg:h-[520px]'
                             />
                         </figure>
                     )
